@@ -3,9 +3,9 @@
 """Type hints."""
 
 
-def headline(text: str, align: bool = True) -> str:
+def headline(text: str, centred: bool = True) -> str:
     """Turn text into a headline."""
-    if align:
+    if not centred:
         return f"{text.title()}\n{'-' * len(text)}"
     else:
         return f" {text.title()} ".center(50, "o")
@@ -13,6 +13,6 @@ def headline(text: str, align: bool = True) -> str:
 
 print(headline("python type checking"))
 print()
-print(headline("python type checking", align=False))
+print(headline("python type checking", centred=False))
 print()
-print(headline("use mypy", align=True))
+print(headline("use mypy", centred=True))
