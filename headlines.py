@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# headlines.py
 """Type hints."""
 
 
@@ -14,4 +15,4 @@ print(headline("python type checking"))
 print()
 print(headline("python type checking", align=False))
 print()
-print(headline("python type checking", align="centre"))
+print(headline("use mypy", align="centre"))
