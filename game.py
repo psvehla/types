@@ -2,16 +2,13 @@
 # game.py
 
 import random
-from typing import List, Tuple
+from typing import List, Tuple, Any, Sequence
 
 Card = Tuple[str, str]
 Deck = List[Card]
 
 SUITS = "♠ ♡ ♢ ♣".split()
 RANKS = "2 3 4 5 6 7 8 9 10 J Q K A".split()
-
-Card = Tuple[str, str]
-Deck = List[Card]
 
 
 def create_deck(shuffle: bool = False) -> Deck:
@@ -27,7 +24,7 @@ def deal_hands(deck: Deck) -> Tuple[Deck, Deck, Deck, Deck]:
     return (deck[0::4], deck[1::4], deck[2::4], deck[3::4])
 
 
-def choose(items):
+def choose(items: Sequence[Any]) -> Any:
     """Choose and return a random item."""
     return random.choice(items)
 
